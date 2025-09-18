@@ -1,0 +1,21 @@
+def write_user_info_to_file(filename="text.txt"):
+
+    fio = input("Введите ФИО: ")
+    city = input("Введите город, который вы хотели бы посетить: ")
+    dish = input("Введите любимое блюдо: ")
+    phone_color = input("Введите цвет телефона: ")
+    book_title = input("Введите название любимой книги: ")
+
+    try:
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(fio + "\n")
+            file.write(city + "\n")
+            file.write(dish + "\n")
+            file.write(phone_color + "\n")
+            file.write(book_title + "\n")
+        print(f"Информация успешно записана в файл '{filename}'.")
+
+    except IOError:
+        print(f"Ошибка при записи в файл '{filename}'.")
+
+write_user_info_to_file()
