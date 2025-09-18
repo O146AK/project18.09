@@ -1,0 +1,11 @@
+def remove_elements(my_list, value_to_remove):
+    new_list = [item for item in my_list if item != value_to_remove]
+    return new_list
+
+my_list = [1, 2, 3, 2, 4, 2, 5]
+value_to_remove = 2
+print("Заданное значение 2")
+
+new_list = remove_elements(my_list, value_to_remove)
+print("Исходный список:", my_list)
+print("Список после удаления (list comprehension):", new_list)
