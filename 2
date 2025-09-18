@@ -1,0 +1,14 @@
+def print_penultimate_character(string):
+
+    if len(string) > 1:
+        print(string[-2])
+    if len(string) < 1:
+        print("Длина строки меньше одного символа")
+    if len(string) == 0:
+        print("В строке нет символов :)")
+
+print_penultimate_character("hello")
+print_penultimate_character("python")
+print_penultimate_character("a")
+print_penultimate_character("")
+
